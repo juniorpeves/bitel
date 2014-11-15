@@ -1,2 +1,146 @@
+azul = #22BCE0
+gris_oscuro = #7A7A7A
+gris_claro = #7A7A7A
+bitel0 = #ffe618
+bitel1 = #258c98
+bitel2 = #FFE690
+
 body
-	background green
+	background white
+	color gris_oscuro
+	font-family Arial
+	font-size 15px
+header
+	background bitel0
+	color bitel1
+	padding 0.5em
+	position relative
+	overflow hidden
+	.logo
+		border-right 1px solid bitel1
+		float left
+		width 55px
+		img
+			width 50px
+			border-radius 50%
+	.titular
+		margin 0 80px 0 70px
+		a
+			text-decoration none
+			color bitel1
+			font-style italic
+			margin -3px 0 1em 0
+			padding 0.2em 0.5em
+			text-shadow 1px 1px 0px black
+		.titulo
+			font-size 18px
+			font-weight normal
+			margin 0
+			padding	0
+	.usuario
+		position absolute
+		top 10px
+		right 10px
+		figure
+			margin 0 /*quitar margenes predeterminados*/
+		.avatar
+			margin 0 2em 0 0 /*margen para alejar avatar*/
+			position relative
+			z-index 2
+			img
+				width 50px /*tamaño al 5o% por retina*/
+				border-radius 50%
+		.flechita
+			border-radius 20%
+			background	bitel1
+			color bitel0
+			display block
+			padding 3px
+			position absolute /*posicion absoluta*/
+			top 15px
+			right 0
+			text-align right /*alineamiento a la derecha */
+			width 2.5em /*ancho de 2 letras*/
+			text-decoration none
+nav
+	background bitel1
+	.menu
+		height 40px
+		line-height 40px
+		margin 0
+		padding 0
+		overflow-x auto
+		white-space nowrap
+		li
+			display inline-block
+			a
+				color bitel0
+				display inline-block
+				margin 0 0.5em
+				padding 0 0.2em
+				text-decoration none
+				&:hover
+					color bitel2
+.posts
+	padding 0.5em	
+	.post
+		background white
+		border-radius 0 0 0.5em 0.5em
+		box-shadow 2px 2px 10px rgba(black, 0.5)
+		color gris_claro
+		margin 1em
+		.descripcion
+			.detalles
+				margin-left 130px
+				height 160px
+				.owner
+					margin 0.5em 0 2em 0		
+				.tag
+					display inline-block
+					background bitel1
+					border-radius 0.5em
+					color bitel2
+					padding 0.2em 0.5em
+					text-decoration none
+					margin 0.2em 0.2em 0 0
+				.titulo
+					color gris_claro
+					font-size 18px
+					font-style italic						
+					padding 0.5em 0.5em 0 0
+			figure
+				margin 0
+			.imagen
+				float left
+				img 
+					height 150px
+					vertical-align top
+					width 120px
+footer
+	background bitel1
+	color bitel0
+	text-align center
+	width 100%
+	padding 0.5em 0
+	h3
+		font-size 13px
+		font-weight normal
+		
+		strong
+			display block
+		.mejor
+			&:before
+			&:after
+				content	" - "	
+				
+/* Responsive Design */
+
+@media screen and (min-width: 768px)
+
+	.posts
+		.post
+			display inline-block
+			width 45%
+			vertical-align top
+			&:nth-child(odd)
+				margin-right 2%
